@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="night">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My Experience</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:
+      linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+      url(img/bg\ expe.jpeg);
+
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+      background-repeat:no-repeat;
+
+      overflow-x:hidden;
+      position:relative;
+      color:white;
+    }
+
+    /* overlay glow */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(0,255,255,0.15),
+      transparent 30%),
+
+      radial-gradient(circle at bottom right,
+      rgba(0,255,255,0.15),
+      transparent 30%),
+
+      linear-gradient(
+      to bottom,
+      rgba(0,10,30,0.6),
+      rgba(0,0,0,0.8));
+
+      z-index:-2;
+    }
+
+    /* grid futuristik */
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+
+      background-image:
+      linear-gradient(rgba(0,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
+
+      background-size:60px 60px;
+      opacity:.3;
+
+      z-index:-1;
+    }
+
+    /* navbar */
+    .navbar-custom{
+      background:rgba(0,0,0,.45);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(0,255,255,.2);
+    }
+
+    /* hero */
+    .hero-section{
+      position:relative;
+    }
+
+    /* hexagon kiri */
+    .hero-section::before{
+      content:"";
+      position:absolute;
+
+      width:320px;
+      height:320px;
+
+      border:2px solid rgba(0,255,255,.12);
+
+      top:-120px;
+      left:-100px;
+
+      clip-path: polygon(
+      25% 6%,
+      75% 6%,
+      100% 50%,
+      75% 94%,
+      25% 94%,
+      0% 50%
+      );
+
+      animation:rotateHex 18s linear infinite;
+    }
+
+    /* hexagon kanan */
+    .hero-section::after{
+      content:"";
+      position:absolute;
+
+      width:250px;
+      height:250px;
+
+      border:2px solid rgba(0,255,255,.1);
+
+      right:-80px;
+      top:40px;
+
+      clip-path: polygon(
+      25% 6%,
+      75% 6%,
+      100% 50%,
+      75% 94%,
+      25% 94%,
+      0% 50%
+      );
+
+      animation:rotateHexReverse 20s linear infinite;
+    }
+
+    @keyframes rotateHex{
+      from{
+        transform:rotate(0deg);
+      }
+      to{
+        transform:rotate(360deg);
+      }
+    }
+
+    @keyframes rotateHexReverse{
+      from{
+        transform:rotate(360deg);
+      }
+      to{
+        transform:rotate(0deg);
+      }
+    }
+
+    /* glow */
+    .glow{
+      box-shadow:0 0 25px rgba(0,255,255,.25);
+    }
+
+    /* float */
+    .float{
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    /* rotate circle */
+    .rotate{
+      animation:rotateCircle 15s linear infinite;
+    }
+
+    @keyframes rotateCircle{
+      from{
+        transform:rotate(0deg);
+      }
+      to{
+        transform:rotate(360deg);
+      }
+    }
+
+    /* monitor hover */
+    .monitor{
+      transition:.5s;
+    }
+
+    .monitor:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 0 35px rgba(0,255,255,.4);
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar{
+      width:8px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+      background:#00e5ff;
+      border-radius:20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar navbar-custom fixed top-0 z-50 px-6 lg:px-16">
+
+    <div class="flex-1">
+
+      <a class="text-cyan-400 text-3xl lg:text-5xl font-bold">
+        Portofolio
+      </a>
+
+    </div>
+
+    <!-- menu -->
+    <div class="hidden lg:flex gap-10 text-lg">
+
+      <a href="index.html#home" class="text-cyan-400 border-b-2 border-cyan-400 pb-1">
+        Home
+      </a>
+
+      <a href="index.html#about" class="hover:text-cyan-400 transition duration-300">
+        About
+      </a>
+
+      <a href="index.html#skills" class="hover:text-cyan-400 transition duration-300">
+        Skills
+      </a>
+
+      <a href="index.html#projects" class="hover:text-cyan-400 transition duration-300">
+        Projects
+      </a>
+
+      <a href="index.html#contact" class="hover:text-cyan-400 transition duration-300">
+        Contact
+      </a>
+
+    </div>
+
+    <!-- icon -->
+    <div class="text-4xl ml-5 cursor-pointer">
+
+      <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-section pt-40 pb-10 text-center px-5">
+
+    <!-- icon -->
+    <div class="w-24 h-24 border-4 border-cyan-400 rounded-full flex items-center justify-center mx-auto text-cyan-400 text-4xl glow float">
+
+      <i class="fa-regular fa-compass"></i>
+
+    </div>
+
+    <!-- title -->
+    <h1 class="text-5xl lg:text-7xl font-bold mt-8">
+
+      My <span class="text-cyan-400">Experience</span>
+
+    </h1>
+
+    <!-- breadcrumb -->
+    <p class="mt-5 text-lg text-gray-300">
+
+      <span class="text-cyan-400">Home</span>
+
+      &nbsp; > &nbsp;
+
+      My Experience
+
+    </p>
+
+  </section>
+
+  <!-- CONTENT -->
+  <section class="max-w-7xl mx-auto px-5 pb-20">
+
+    <div class="border-2 border-cyan-400 rounded-[30px] p-6 lg:p-14 bg-[#020817]/70 backdrop-blur-md glow">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- LEFT -->
+        <div>
+
+          <!-- title -->
+          <h2 class="text-cyan-400 text-3xl lg:text-5xl font-semibold flex items-center gap-5 mb-10">
+
+            <i class="fa-regular fa-file-lines"></i>
+
+            Recount Text
+
+          </h2>
+
+          <!-- text -->
+          <div class="space-y-7 text-lg leading-9 text-gray-200">
+
+            <p>
+              Good morning everyone,
+            </p>
+
+            <p>
+              I would like to tell you about my experience in creating a website.
+              For me, making a website was both challenging and exciting because
+              I learned many new things during the process.
+            </p>
+
+            <p>
+              When I first started, I did not understand much about web development.
+              I had to learn basic coding such as HTML for the structure,
+              CSS for the design, and JavaScript for interactive features.
+            </p>
+
+            <p>
+              At first, it was difficult to remember the codes and understand
+              how they worked together, but I kept practicing and trying.
+            </p>
+
+            <p>
+              One of my favorite parts was designing the website interface.
+              I enjoyed choosing colors, arranging the layout,
+              adding icons and images, and making the website look clean and modern.
+            </p>
+
+            <p>
+              I also learned how to create a responsive website
+              so it could work properly on both smartphones and computers.
+            </p>
+
+            <p>
+              Of course, I faced some problems while creating the website.
+              Sometimes there were errors in the code,
+              buttons did not work, or the design looked messy.
+            </p>
+
+            <p>
+              Through this experience, I learned not only about coding
+              but also about patience, creativity, and teamwork.
+            </p>
+
+            <p>
+              This experience motivated me to continue learning more
+              about technology and web design in the future.
+            </p>
+
+            <p>
+              Thank you.
+            </p>
+
+          </div>
+
+          <!-- button -->
+           <a href="index.html">
+          <button class="btn btn-outline btn-info mt-10 text-lg hover:scale-105 transition">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Back To Home
+
+          </button>
+          </a>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="flex justify-center items-center relative">
+
+          <!-- rotating circle -->
+          <div class="absolute w-[420px] h-[420px] border border-dashed border-cyan-400/30 rounded-full rotate"></div>
+
+          <!-- monitor -->
+          <div>
+
+            <div class="monitor w-[320px] lg:w-[460px] border-[3px] border-cyan-400 rounded-[30px] p-8 bg-cyan-400/5 relative glow">
+
+              <!-- dots -->
+              <div class="absolute top-5 right-5 flex gap-3">
+
+                <div class="w-4 h-4 rounded-full bg-cyan-400"></div>
+                <div class="w-4 h-4 rounded-full bg-cyan-400"></div>
+                <div class="w-4 h-4 rounded-full bg-cyan-400"></div>
+
+              </div>
+
+              <!-- code icon -->
+              <div class="text-center text-cyan-400 text-8xl lg:text-9xl my-16 float">
+
+                <i class="fa-solid fa-code"></i>
+
+              </div>
+
+              <!-- boxes -->
+              <div class="grid grid-cols-2 gap-5">
+
+                <div class="h-24 border-2 border-cyan-400 rounded-2xl"></div>
+
+                <div class="h-24 border-2 border-cyan-400 rounded-2xl"></div>
+
+              </div>
+
+            </div>
+
+            <!-- stand -->
+            <div class="w-40 h-4 bg-cyan-400 rounded-full mx-auto mt-5 glow"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10">
+
+    <div class="max-w-7xl mx-auto px-5 py-16">
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+        <!-- 1 -->
+        <div>
+
+          <h2 class="text-cyan-400 text-3xl font-bold mb-5">
+
+            Portofolio
+
+          </h2>
+
+          <p class="text-gray-300 leading-8">
+
+            I am a student with a strong interest in technology,
+            especially in web development.
+
+          </p>
+
+        </div>
+
+        <!-- 2 -->
+        <div>
+
+          <h2 class="text-cyan-400 text-3xl font-bold mb-5">
+
+            Services
+
+          </h2>
+
+          <div class="space-y-3 text-gray-300">
+
+            <p>Web Design</p>
+            <p>UI/UX Design</p>
+            <p>Responsive Design</p>
+
+          </div>
+
+        </div>
+
+        <!-- 3 -->
+        <div>
+
+          <h2 class="text-cyan-400 text-3xl font-bold mb-5">
+
+            Quick Links
+
+          </h2>
+
+          <div class="space-y-3 text-gray-300">
+
+            <p>Home</p>
+            <p>About</p>
+            <p>Skills</p>
+            <p>Projects</p>
+            <p>Experience</p>
+
+          </div>
+
+        </div>
+
+        <!-- 4 -->
+        <div>
+
+          <h2 class="text-cyan-400 text-3xl font-bold mb-5">
+
+            Follow Me
+
+          </h2>
+
+          <div class="flex gap-5 text-3xl text-cyan-400">
+
+            <i class="fa-brands fa-github hover:scale-110 transition duration-300 cursor-pointer"></i>
+
+            <i class="fa-brands fa-linkedin hover:scale-110 transition duration-300 cursor-pointer"></i>
+
+            <i class="fa-brands fa-instagram hover:scale-110 transition duration-300 cursor-pointer"></i>
+
+            <i class="fa-brands fa-whatsapp hover:scale-110 transition duration-300 cursor-pointer"></i>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- copyright -->
+      <div class="text-center border-t border-white/10 mt-14 pt-8 text-gray-400">
+
+        © 2026 PortFolio. All rights reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
