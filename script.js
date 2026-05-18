@@ -239,3 +239,26 @@
       );
 
     });
+
+    
+    // SLIDER BUTTON
+
+const projectSlider = document.querySelector(".projects-slider");
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+
+  projectSlider.scrollBy({
+    left: 350,
+    behavior: "smooth"
+  });
+
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+
+  projectSlider.scrollBy({
+    left: -350,
+    behavior: "smooth"
+  });
+
+});
