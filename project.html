@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>All Projects</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        #projects-page {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #38bdf8;
+            text-align: center;
+        }
+
+        .project-card {
+            background: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-card h4 {
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            min-height: 70px;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        .btn-custom {
+            background: #38bdf8;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: #0ea5e9;
+        }
+
+        .btn-outline-custom {
+            border: 1px solid #38bdf8;
+            color: #38bdf8;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-outline-custom:hover {
+            background: #38bdf8;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="projects-page">
+
+        <div class="container">
+
+            <h2 class="section-title">ALL PROJECTS</h2>
+
+            <!-- Tambahkan tombol ini di bawah judul -->
+            <div class="text-center mb-5">
+
+                <a href="index.html" class="btn-outline-custom">
+                    <i class="bi bi-arrow-left"></i> Back To Home
+                </a>
+
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- CARD 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="project-card">
+
+                        <img src="img/p1.png" alt="Project 1">
+
+                        <div class="p-4">
+
+                            <h4>Recycled Craft Design</h4>
+
+                            <p>
+                                Website for a waste recycling and functional product design.
+                            </p>
+
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://safitririandhani-del.github.io/lusana.official.web/website.html"
+                                    class="btn-custom">
+                                    Live Demo <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                                <a href="https://github.com/safitririandhani-del/lusana.official.web.git"
+                                    class="btn-outline-custom">
+                                    Github <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="project-card">
+
+                        <img src="img/p2.png" alt="Project 2">
+
+                        <div class="p-4">
+
+                            <h4>Digital School</h4>
+
+                            <p>
+                                School profile website with modern design and information management.
+                            </p>
+
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://safitririandhani-del.github.io/web-smk-digital/" class="btn-custom">
+                                    Live Demo <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                                <a href="https://github.com/safitririandhani-del/web-smk-digital.git"
+                                    class="btn-outline-custom">
+                                    Github <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="project-card">
+
+                        <img src="img/p3.png" alt="Project 3">
+
+                        <div class="p-4">
+
+                            <h4>Education Platform</h4>
+
+                            <p>
+                                Responsive website for education and environmental awareness platform.
+                            </p>
+
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://safitririandhani-del.github.io/tugas3-web-environs/"
+                                    class="btn-custom">
+                                    Live Demo <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                                <a href="https://github.com/safitririandhani-del/tugas3-web-environs.git"
+                                    class="btn-outline-custom">
+                                    Github <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="project-card">
+
+                        <img src="img/p4.png" alt="Project 4">
+
+                        <div class="p-4">
+
+                            <h4>Coffee Shop Website</h4>
+
+                            <p>
+                                Modern coffee shop website with menu highlights and clean interface.
+                            </p>
+
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Bootstrap</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://safitririandhani-del.github.io/tugas4-web-coffee-shop/"
+                                    class="btn-custom">
+                                    Live Demo <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                                <a href="https://github.com/safitririandhani-del/tugas4-web-coffee-shop.git"
+                                    class="btn-outline-custom">
+                                    Github <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="project-card">
+
+                        <img src="img/p5.png" alt="Project 5">
+
+                        <div class="p-4">
+
+                            <h4>Furniture Showcase</h4>
+
+                            <p>
+                                Elegant furniture website with modern product display and responsive layout.
+                            </p>
+
+                            <div class="d-flex gap-2 mb-3 flex-wrap">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="https://safitririandhani-del.github.io/tugas5-website-furniture/"
+                                    class="btn-custom">
+                                    Live Demo <i class="bi bi-box-arrow-up-right"></i>
+                                </a>
+
+                                <a href="https://github.com/safitririandhani-del/tugas5-website-furniture.git"
+                                    class="btn-outline-custom">
+                                    Github <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
